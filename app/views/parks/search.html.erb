@@ -5,7 +5,7 @@
 <ol>
     <% @park_results.each do |p| %>
     <h3><li><%= p.full_name %></h3>
-      Description: <%= p.description %><br>
+      Description: <%= p.description %><br><br>
       Directions: <%= p.directions %><br><br>
       <% p.hours.each do |day, hours| %>
         <%= day.to_s.capitalize %> - <%= hours %><br>

@@ -1,0 +1,14 @@
+<h2> Park Results for <%= @state %></h2>
+<h4>Total Results: <%= @park_results.count %></h4>
+<ol>
+    <% @park_results.each do |p| %>
+    <h3><li><%= p.full_name %></h3>
+      Description: <%= p.description %><br>
+      Directions: <%= p.directions %><br><br>
+      <% p.hours.each do |day, hours| %>
+        <%= day.to_s.capitalize %> - <%= hours %><br>
+      <% end %>
+      <br><br>
+    </li>
+    <% end %>
+</ol>

@@ -12,4 +12,15 @@
       <% end %>
     </ul>
   </div>
+
+  <% if @park_results %>
+    <% @park_results.each do |p| %>
+      Name: <%= p.full_name %><br>
+      Description: <%= p.desription %><br>
+      Directions: <%= p.directions %>
+      <% p.hours.each do |day, hours| %>
+        <%= day.to_s.upcase %> - <%= hours %>
+      <% end %>
+    <% end %>
+  <% end %>
 </nav>
